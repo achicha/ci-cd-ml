@@ -17,7 +17,7 @@ then
 fi
 
 region=$(aws configure get region)
-region=${region:-us-west-2}
+region=${region:-eu-west-1}
 
 
 fullname="${account}.dkr.ecr.${region}.amazonaws.com/${image}:latest"
