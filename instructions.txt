@@ -1,7 +1,6 @@
 aws configure
 
-chmod 400 pem
-
+chmod 400 key.pem
 
 aws cloudformation create-stack --template-body file://ecs-cluster.template --stack-name EcsClusterStack --capabilities CAPABILITY_IAM --tags Key=Name,Value=ECS --region eu-west-1 --parameters ParameterKey=KeyName,ParameterValue=ci-cd ParameterKey=EcsCluster,ParameterValue=getting-started ParameterKey=AsgMaxSize,ParameterValue=2
 
